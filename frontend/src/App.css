@@ -1,0 +1,57 @@
+/* @media only screen and (min-width : 450px){
+    .customeHeight{
+        height: 350px;
+    }
+} */
+
+
+
+
+/* Table header styling */
+.ant-table-thead>tr>th {
+  background-color: #B0BEC5 !important;
+  /* Soft Indigo */
+  font-weight: 600;
+  /* White text for better contrast */
+}
+
+/* Row striping */
+.ant-table-tbody>tr:nth-child(odd)>td {
+  background-color: #fafafa;
+}
+
+.ant-table-tbody>tr:nth-child(even)>td {
+  background-color: #ffffff;
+}
+
+/* Hover effect for rows */
+.ant-table-tbody>tr:hover>td {
+  background-color: #c8cfd3 !important;
+  /* Frosty Cyan */
+  transition: background-color 0.3s ease;
+}
+
+
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(28, 29, 29)685;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #5C6685;
+}
+
+
+
+
+
+

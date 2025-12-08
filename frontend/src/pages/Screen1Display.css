@@ -1,0 +1,84 @@
+@keyframes horizontal-scroll-d {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-horizontal-scroll-d {
+  width: max-content;
+  animation: horizontal-scroll-d 25s linear infinite;
+}
+
+
+
+
+/* @keyframes vertical-scroll {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+.animate-vertical-scroll {
+  animation: vertical-scroll 5s linear infinite;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+} */
+
+
+@keyframes vertical-smooth-scroll {
+  0% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-25%);
+
+  }
+
+  50% {
+    transform: translateY(-25%);
+
+  }
+
+  90% {
+    transform: translateY(-50%);
+ 
+  }
+
+  100% {
+    transform: translateY(-50%);
+
+  }
+}
+
+.animate-vertical-scroll {
+  animation: vertical-smooth-scroll 12s ease-in-out infinite;
+}
+
+
+
+
+
+
+.scroll-card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(59, 130, 246, 0.35);
+  border-radius: 12px;
+  padding: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1e3a8a;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
