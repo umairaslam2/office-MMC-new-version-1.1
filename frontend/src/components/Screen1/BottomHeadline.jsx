@@ -2,7 +2,7 @@ import axios from "axios";
 import { memo, useEffect, useState } from "react";
 import { base_URL } from "../../utills/baseUrl";
 import { motion } from "framer-motion";
-import NubitLogo from "../../assets/nubit-logo.png"
+import NubitLogo from "../../assets/nubit logo png.png"
 
 const BottomHeadline = () => {
 
@@ -34,9 +34,9 @@ const BottomHeadline = () => {
                 transition={{ repeat: Infinity, duration: 25, ease: "linear" }}
                 className="text-lg    [@media(min-width:3200px)_and_(max-height:2000px)]:text-2xl  [@media(min-width:3200px)_and_(min-height:2000px)]:text-4xl font-semibold whitespace-nowrap flex text-center text-white/60"
             >
-                <div className=" text-white/60 [@media(min-width:1920px)]:text-xl   [@media(min-width:3200px)_and_(max-height:2000px)]:text-2xl  [@media(min-width:3200px)_and_(min-height:2000px)]:text-3xl min-[1520px]:text-[18px] mr-[50%]">
-                    Powered by <span className="text-[#00b0ff] font-bold">nubit</span>
-                    {/* <img  src={NubitLogo} alt="nubit" /> */}
+                <div className=" text-white/60 [@media(min-width:1920px)]:text-xl flex gap-2 items-center  [@media(min-width:3200px)_and_(max-height:2000px)]:text-2xl  [@media(min-width:3200px)_and_(min-height:2000px)]:text-3xl min-[1520px]:text-[18px] mr-[50%]">
+                    {/* Powered by <span className="text-[#00b0ff] font-bold">nubit</span> */}
+                    Powered by <img className="w-[50px] [@media(min-width:2200px)]:w-[70px] [@media(min-width:3200px)]:w-[80px]" src={NubitLogo} alt="Nubit" />
                 </div>
                 💙 {headlinesData?.LOWERHEADLINE} 💙
             </motion.div>
@@ -48,5 +48,5 @@ export default memo(BottomHeadline)
 
 
 
-// [@media(min-width:2200px)]:w-[290px] [@media(min-width:3200px)_and_(min-height:1000px)]:w-[340px] [@media(min-width:3200px)_and_(min-height:1550px)]:w-[420px] [@media(min-width:4200px)]:w-[540px] 
+// [@media(min-width:2200px)]:w-[290px] [@media(min-width:3200px)_and_(min-height:1000px)]:w-[340px] [@media(min-width:3200px)_and_(min-height:1550px)]:w-[420px] [@media(min-width:4200px)]:w-[540px]
 //                          h-[300px] [@media(min-width:2200px)]:h-[380px] [@media(min-width:3200px)_and_(min-height:1000px)]:h-[420px] [@media(min-width:3200px)_and_(min-height:1550px)]:h-[520px] [@media(min-width:4200px)]:h-[680px]

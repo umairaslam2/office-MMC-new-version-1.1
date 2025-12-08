@@ -2,12 +2,19 @@ import { useEffect, useState } from "react";
 import { base_URL } from "../../utills/baseUrl";
 import axios from "axios";
 import ImageLoader from "../../utills/ImageLoader";
+import { toast } from "react-toastify";
+import { logoutUser } from "../../reduxToolKit/authSlice";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import NubitLogo from "../../assets/nubit logo png.png"
 
 
 const S4LeftSideImages = () => {
 
     const [imagesData, setImagesData] = useState([]);
     const [index, setIndex] = useState(0);
+      const navigate = useNavigate();
+      const dispatch = useDispatch();
 
     // console.log("imagesData in screen 5:", imagesData);
     // console.log("index in screen 5:", index);
@@ -44,8 +51,14 @@ const S4LeftSideImages = () => {
     }, [imagesData]);
 
 
+    const handleLogout = () => {
+        dispatch(logoutUser());
+        toast.success("Logout Successful");
+        navigate("/login");
+    };
+
     return (
-        <div className="w-[70%] flex items-center justify-center bg-[#2b2d70] border-r-4 border-[#a4b0ff]">
+        <div className="w-[70%] flex items-center justify-center relative bg-[#2b2d70] border-r-4 border-[#a4b0ff]">
             {
                 imagesData[index] ?
                     <>
@@ -62,6 +75,14 @@ const S4LeftSideImages = () => {
                     <ImageLoader />
 
             }
+
+            {/* ---- POWERED BY NUBIT ---- */}
+            <div onClick={handleLogout} className=" text-white/60 absolute  bottom-2 w-full  cursor-pointer flex items-center justify-center gap-2 [@media(min-width:1920px)]:text-2xl  [@media(min-width:3000px)]:text-3xl [@media(min-width:4400px)]:text-5xl  min-[1520px]:text-[18px] ">
+                {/* <div onClick={handleLogout} className="absolute cursor-pointer bottom-2 left-1/2 -translate-x-1/2 text-sm md:text-lg xl:text-xl font-semibold tracking-widest opacity-70 powered-by-text"> */}
+                {/* Powered by <span className="text-[#62e2ff] font-bold">Nubit</span> */}
+                Powered by <img className="w-[60px] [@media(min-width:2200px)]:w-[80px] [@media(min-width:3200px)]:w-[90px]" src={NubitLogo} alt="" />
+            </div>
+
         </div>
     )
 }

@@ -1,31 +1,20 @@
-import React, { useEffect, useState } from "react";
+
 import S4Clock from "../components/Screen4/S4Clock";
 import TodayDoctorsList from "../components/Screen4/TodayDoctorsList";
 import S4LeftSideImages from "../components/Screen4/S4LeftSideImages";
-import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { logoutUser } from "../reduxToolKit/authSlice";
-import { toast } from "react-toastify";
-
-
 
 
 const Screen4Display = () => {
 
-  const navigate = useNavigate();
-  const dispatch = useDispatch();
 
-  const handleLogout = () => {
-    dispatch(logoutUser());
-    toast.success("Logout Successful");
-    navigate("/login");
-  };
 
   return (
     <div className="h-screen w-screen bg-[#12154b] flex text-white overflow-hidden font-sans select-none relative">
+
       {/* LEFT IMAGE */}
       <S4LeftSideImages />
       {/* RIGHT SIDE */}
+
       <div className="w-[30%] min-w-[360px] flex flex-col justify-between bg-gradient-to-b from-[#5a6ad3] to-[#b0b7f5] p-4">
         {/* Doctor List */}
         <TodayDoctorsList />
@@ -40,10 +29,7 @@ const Screen4Display = () => {
           <S4Clock />
         </div>
       </div>
-      {/* ---- POWERED BY NUBIT ---- */}
-      <p onClick={handleLogout} className="absolute cursor-pointer bottom-2 left-1/2 -translate-x-1/2 text-sm md:text-lg xl:text-xl font-semibold tracking-widest opacity-70 powered-by-text">
-        Powered by <span className="text-[#62e2ff] font-bold">Nubit</span>
-      </p>
+
       {/* FONT SIZE BREAKPOINTS - FINAL PERFECT VERSION */}
       <style>{`
   .doctor-item {
@@ -109,7 +95,8 @@ const Screen4Display = () => {
     }
   }
 `}</style>
-    </div>
+
+    </div >
   );
 };
 export default Screen4Display;
