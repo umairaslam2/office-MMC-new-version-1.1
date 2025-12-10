@@ -77,7 +77,7 @@ const BottomSlider = () => {
                         <img
                             src={doc.IMAGE || "/placeholder-doctor.jpg"}
                             alt={doc.DOCTOR_NAME}
-                            className="p-1 w-[70px h-[70px] 
+                            className="p-1 w-[70px] h-[70px] 
                                 [@media(min-width:3200px)]:w-[90px] [@media(min-width:3200px)]:h-[90px]
                                 [@media(min-width:3200px)_and_(min-height:2000px)]:w-[100px] [@media(min-width:3200px)_and_(min-height:2000px)]:h-[100px]
                                 [@media(min-width:4200px)_and_(min-height:2600px)]:w-[120px] [@media(min-width:4200px)_and_(min-height:2600px)]:h-[120px]
@@ -94,14 +94,14 @@ const BottomSlider = () => {
                                 [@media(min-width:3200px)]:text-[24px] 
                                 [@media(min-width:3200px)_and_(min-height:2000px)]:text-[32px] 
                                 capitalize text-blue-800 line-clamp-1">
-                                {doc.DOCTOR_NAME}
+                                {doc?.DOCTOR_NAME}
                             </h3>
 
                             <p className="text-[16px] 
                                 [@media(min-width:3200px)]:text-[20px] 
                                 [@media(min-width:3200px)_and_(min-height:2000px)]:text-[26px] 
                                 text-blue-500 font-medium mb-2 line-clamp-1">
-                                {doc.FACULTY_NAME}
+                                {doc?.FACULTY_NAME}
                             </p>
 
                             <div className="text-sm 
@@ -110,7 +110,7 @@ const BottomSlider = () => {
                                 text-gray-600 grid grid-cols-2 gap-x-6 gap-y-1">
                                 {doc.schedule?.map((s, idx) => (
                                     <p key={idx} className="truncate">
-                                        <strong>{s.day}</strong> • {s.time}
+                                        <strong>{s?.day || "No Day"}</strong> • {s?.time || "No Time"}
                                     </p>
                                 ))}
                             </div>
@@ -119,7 +119,7 @@ const BottomSlider = () => {
                                 [@media(min-width:3200px)]:text-xl 
                                 [@media(min-width:3200px)_and_(min-height:2000px)]:text-3xl 
                                 text-gray-700 mt-1">
-                                <strong className="text-blue-700">Room:</strong> {doc.ROOMNAME}
+                                <strong className="text-blue-700">Room:</strong> {doc?.ROOMNAME}
                             </p>
                         </div>
                     </div>

@@ -285,7 +285,7 @@ const DoctorTable = () => {
             label="Contact No"
             rules={[{ required: true, message: "Please enter contact no" }]}
           >
-            <Input placeholder="Enter contact" size="large" />
+            <Input placeholder="Enter contact" size="large"    type="number"/>
           </Form.Item>
 
           {/* Faculty */}
@@ -303,7 +303,7 @@ const DoctorTable = () => {
 
           {/* Email */}
           <Form.Item name="email" label="Email">
-            <Input placeholder="Enter email" size="large" />
+            <Input placeholder="Enter email" size="large"   type="email" />
           </Form.Item>
 
           {/* Gender */}

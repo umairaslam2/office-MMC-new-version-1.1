@@ -98,11 +98,11 @@ const Screen2Display = () => {
     const todayDoctors = useMemo(() => {
 
         const today = moment().format("ddd");
-        return doctorsData.filter((item) => {
+        return doctorsData?.filter((item) => {
             const days = item?.SCHEDULE_SUMMARY
                 ?.split(", ")
                 .map((it) => it.slice(0, 3));
-            return days.includes(today);
+            return days?.includes(today);
         });
 
     }, [doctorsData]);
